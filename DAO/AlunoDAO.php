@@ -37,7 +37,7 @@
         {
             $sql = "UPDATE aluno SET nome=?, ra=?, curso=?, WHERE id=?";
 
-            $stmt = parent:$conexao->prepare($sql);
+            $stmt = parent::$conexao->prepare($sql);
             $stmt->bindValue(1, $model->Nome);
             $stmt->bindValue(2, $model->RA);
             $stmt->bindValue(3, $model->Curso);
@@ -50,7 +50,7 @@
         {
             $sql = "SELECT * FROM aluno WHERE id=?";
 
-            $stmt = parent:$conexao->prepare($sql);
+            $stmt = parent::$conexao->prepare($sql);
             $stmt->bindValue(1, $id);
             $stmt->bindValue(2, $model->RA);
             $stmt->bindValue(3, $model->Curso);
