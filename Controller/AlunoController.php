@@ -54,7 +54,18 @@ final class AlunosController extends Controller
 
     public static function delete() : void
     {
+        parent::isProtected();
 
+        $model = new Aluno;
+
+        try
+        {
+            $model->delete((int) $_GET['id']);
+            parent::redirect("/aluno");
+        }catch(Exception $e){
+            $model -> setError("Ocorreu um error ao excluir o aluno:");
+            $model -> setError($e->getMessage());
+        }
     }
 }
 
