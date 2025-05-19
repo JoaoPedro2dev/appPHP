@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
     <?php include VIEW . 'includes/menu.php'?>
 
     <h1>Cadastro de Alunos</h1>
@@ -15,7 +14,7 @@
     <?=  $Model->getError() ?>
 
     <form>
-        <input type="hidden">
+        <input type="hidden" name="id" value="<?=$model->Id?>">
     
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
