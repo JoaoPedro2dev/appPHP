@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Model;
@@ -15,7 +14,7 @@ final class Livro extends Model
 
     public $Id_Categoria;
 
-    public $Id_Autores;
+    public $Id_Autores = [];
 
     public ?string $Titulo
     {
