@@ -10,7 +10,6 @@ abstract class DAO extends PDO
 
     public function __construct()
     {
-        // mysql:host=localhost:3307;dbname=biblioteca
         $dsn = "mysql:host=" . $_ENV['db']['host'] . ";dbname=" 
              . $_ENV['db']['database'];
 
@@ -24,7 +23,7 @@ abstract class DAO extends PDO
                     PDO::ATTR_PERSISTENT => true,                    
                     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8mb4'
                 ]
-            ); // Fecha construtor da classe PDO 
-        } // Fecha if
-    } // Fecha construtor da classe DAO
-} // Fecha classe
+            );
+        } 
+    } 
+} 
