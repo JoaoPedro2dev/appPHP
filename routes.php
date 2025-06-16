@@ -7,7 +7,7 @@
         AutorController,
         CategoriaController,
         LivroController,
-        EmprestimoControler
+        EmprestimoController
     };
 
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -76,15 +76,15 @@
         break;
 
         case '/emprestimo':
-            EmprestimoControler::index();
+            EmprestimoController::index();
         break;
 
         case '/emprestimo/cadastro':
-            EmprestimoControler::cadastro();
+            EmprestimoController::cadastro();
         break;
 
         case '/emprestimo/delete/':
-            EmprestimoControler::delete();
+            EmprestimoController::delete();
         break;
     }
 

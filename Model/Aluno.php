@@ -2,13 +2,14 @@
 
 namespace App\Model;
 
+// use App\DAO\AlunoDAO;
 use App\DAO\AlunoDAO;
 use Exception;
 
 final class Aluno extends Model{
     public ?int $Id = null;
 
-    public ?string $nome
+    public ?string $Nome
     {
         set
         {
@@ -63,7 +64,7 @@ final class Aluno extends Model{
 
         return $this->rows;
     }
-
+ 
     function delete(int $id) : bool
     {
         return new AlunoDAO() -> delete($id);

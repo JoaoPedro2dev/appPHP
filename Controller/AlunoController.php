@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Model\Aluno;
 use Exception;
 
-final class AlunosController extends Controller
+final class AlunoController extends Controller
 {
     public static function index() : void
     {
@@ -18,7 +18,7 @@ final class AlunosController extends Controller
             $model -> getAllRows();
         }catch(Exception $e){
             $model->setError("Ocorreu um erro ao buscar os alunos: ");
-            $model->setError($E->getMessage());
+            $model->setError($e->getMessage());
         }
 
         parent::render('Aluno/lista_aluno.php', $model);
@@ -34,7 +34,7 @@ final class AlunosController extends Controller
         {
             if(parent::isPost()){
                 $model->Id = !empty($_POS['id']) ? $_POST['id'] : null;
-                $model->Nome = $_POS['nome'];
+                $model->Nome = $_POST['nome'];
                 $model->RA = $_POST['ra'];
                 $model->Curso = $_POST['curso'];
                 $model->save();
@@ -46,7 +46,7 @@ final class AlunosController extends Controller
                 }
             }
         }catch(Exception $e){
-            $model -> seError($e->getMessage());
+            $model -> setError($e->getMessage());
         }
 
         parent::render('Aluno/form_aluno.php', $model);

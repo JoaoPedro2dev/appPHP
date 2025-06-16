@@ -11,7 +11,7 @@
 
         final protected static function render(string  $views, ?Model $model) : void
         {
-            include VIEWS . "/$view";
+            include VIEWS . "/$views";
         }
 
         final protected static function  isPost(): bool
