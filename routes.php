@@ -9,7 +9,7 @@
         LivroController,
         EmprestimoControler
     };
-+
+
     $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     switch($url)
@@ -18,7 +18,6 @@
             inicialController::index();
         break;
 
-        // rotas para login
         case '/login':
             LoginController::index();
         break;
@@ -27,7 +26,6 @@
             LoginController::logout();
         break;
 
-        // rotas para alunos
         case '/aluno':
             AlunoController::index();
         break;
@@ -40,7 +38,6 @@
             AlunoController::delete();
         break;
 
-        // rotas para autores
         case '/autor':
             AutorController::index();
         break;
@@ -53,7 +50,6 @@
             AutorController::delete();
         break;
         
-        // rotas para categoria
         case '/categoria':
             CategoriaController::index();
         break;
@@ -67,7 +63,6 @@
         break;
 
          
-        // rotas para livro
         case '/livro':
             LivroController::index();
         break;
@@ -80,7 +75,6 @@
             LivroController::delete();
         break;
 
-        // rotas para emprestimo
         case '/emprestimo':
             EmprestimoControler::index();
         break;
