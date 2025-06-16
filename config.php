@@ -5,7 +5,7 @@
 
     $_ENV['db']['host'] = 'localhost:3307';
     $_ENV['db']['user'] = 'root';
-    $_ENV['db']['pass'] = 'etecjau';
+    $_ENV['db']['pass'] = '';
     $_ENV['db']['database'] = 'biblioteca';
     
 ?>
